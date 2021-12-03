@@ -28,3 +28,34 @@ switch (userName) {
 }
 
 console.log(greeting)
+
+
+console.log("------------------ ACCESSING STRING CONTENT ------------------")
+
+let helloStriversString = "Hello Strivers" // We can think of strings as if they were ARRAYS OF CHARACTERS
+            // Index:      0123456789... <--- As in arrays, these are zero-based indexes for accessing individual characters
+
+console.log("The seventh character of this string is", helloStriversString[6])
+
+let expandedString = ""
+for (let i = 0; i < helloStriversString.length; i++) {
+
+    let currentCharacter = helloStriversString[i]
+
+    if (currentCharacter === " ") {
+        break
+    }
+
+    if (currentCharacter === "l") {
+        continue
+    }
+
+    console.log(currentCharacter)
+
+    expandedString += currentCharacter
+    expandedString += " "
+}
+
+// H e l l o   S t r i v e r s
+console.log(expandedString)
+
