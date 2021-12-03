@@ -116,7 +116,7 @@ console.log(greetingYell)
 let greetingWhisper = greeting.toLowerCase()
 console.log(greetingWhisper)
 
-console.log("------------------ FINDING THE FIRST OCCURENCE OF A CHARACTER OR SUBSTRING ------------------")
+console.log("------------------ FINDING THE FIRST OCCURRENCE OF A CHARACTER OR SUBSTRING ------------------")
 
 let indexOfAlberto = greeting.indexOf("Alb")
 console.log(`'Alb' starts at index ` + indexOfAlberto)
@@ -133,3 +133,28 @@ console.log(splittedString)
 console.log("------------------ JOINING THEM BACK ------------------")
 let reJoinedString = splittedString.join("]-[")
 console.log(reJoinedString)
+
+
+console.log("------------------ CREATING OUR OWN FUNCTIONS ------------------")
+
+const joinTwoStrings = function(firstString, secondString) {
+
+    if ((firstString === undefined)||(secondString === undefined)){
+        console.log("ERROR: please check your parameters:", firstString, secondString)
+        return
+    }
+
+    let result = firstString + "---" + secondString
+    return result
+}
+
+console.log("We're almost finished")
+
+let output = joinTwoStrings("Ali", "Matt")
+output = output.toUpperCase()
+console.log(output)
+
+joinTwoStrings("Martin", "Luca")
+joinTwoStrings("Farrukh", "Gbemi")
+output = joinTwoStrings("Julita", 79)
+console.log(output)
