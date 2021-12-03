@@ -24,7 +24,7 @@ switch (userName) {
     case "Matt": greeting = "Hello Matt!"; break
     case "Julita": greeting = "Hej Julita!"; break
     case "Gbemi": greeting = "Moi Gbemi!"; break
-    default: greeting = `Hi ${userName}!`; break
+    default: greeting = `Nice to see you ${userName}!`; break
 }
 
 console.log(greeting)
@@ -99,3 +99,37 @@ console.log(studentObject.firstName)
 
 //studentObject = {} // It only prevents REASSIGNING that variable to another object (or string/number/bool...)
 // Same applies to arrays: I can change the content of them, but not REASSIGN the variable to something else
+
+
+var myDearOldVar = "Please, don't use me anymore. I'm super buggy"
+// AVOID USING VAR. It's the old way to declare variables, and it makes a hell of mess with scopes. Don't use it. Please.
+
+
+console.log("------------------ STRING MANIPULATION ------------------")
+// More about string functions on : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+
+console.log("------------------ TO UPPER/LOWER CASE ------------------")
+let greetingYell = greeting.toUpperCase() // This will NOT change the original string (greeting)
+console.log(greetingYell)
+
+let greetingWhisper = greeting.toLowerCase()
+console.log(greetingWhisper)
+
+console.log("------------------ FINDING THE FIRST OCCURENCE OF A CHARACTER OR SUBSTRING ------------------")
+
+let indexOfAlberto = greeting.indexOf("Alb")
+console.log(`'Alb' starts at index ` + indexOfAlberto)
+
+
+console.log("------------------ GETTING A SUBSTRING ------------------")
+let extractedName = greeting.slice(indexOfAlberto, indexOfAlberto + 7)
+console.log(extractedName)
+
+console.log("------------------ SPLIT A STRING INTO SEVERAL SUBSTRINGS ------------------")
+let splittedString = greeting.split(" ")
+console.log(splittedString)
+
+console.log("------------------ JOINING THEM BACK ------------------")
+let reJoinedString = splittedString.join("]-[")
+console.log(reJoinedString)
