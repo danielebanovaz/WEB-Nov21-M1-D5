@@ -1,5 +1,15 @@
 
-console.log("------------------ SWITCH/CASE ------------------")
+// Remember that you need to DECLARE a function BEFORE you can use it
+// (you'll get an error otherwise)
+
+const writeHeader = function(title) {
+    console.log(`\n------------------==[ ${title.toUpperCase()} ]==------------------`)
+}
+
+// THE LESSON ACTUALLY STARTED FROM DOWN HERE
+// vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+writeHeader("switch/case")
 
 let userName = "Alberto"
 let greeting
@@ -30,7 +40,7 @@ switch (userName) {
 console.log(greeting)
 
 
-console.log("------------------ ACCESSING STRING CONTENT ------------------")
+writeHeader("ACCESSING STRING CONTENT")
 
 let helloStriversString = "Hello Strivers" // We can think of strings as if they were ARRAYS OF CHARACTERS
             // Index:      0123456789... <--- As in arrays, these are zero-based indexes for accessing individual characters
@@ -60,7 +70,7 @@ for (let i = 0; i < helloStriversString.length; i++) {
 console.log(expandedString)
 
 
-console.log("------------------ SCOPE OF A VARIABLE ------------------")
+writeHeader("SCOPE OF A VARIABLE")
 // A variable will only exist within its own SCOPE (= its BLOCK OF CODE / its ENCLOSING CURLY BRACKETS)
 
 //if (true)
@@ -104,38 +114,36 @@ console.log(studentObject.firstName)
 var myDearOldVar = "Please, don't use me anymore. I'm super buggy"
 // AVOID USING VAR. It's the old way to declare variables, and it makes a hell of mess with scopes. Don't use it. Please.
 
-
-console.log("------------------ STRING MANIPULATION ------------------")
+writeHeader("STRING MANIPULATION")
 // More about string functions on : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
 
-console.log("------------------ TO UPPER/LOWER CASE ------------------")
+writeHeader("TO UPPER/LOWER CASE")
 let greetingYell = greeting.toUpperCase() // This will NOT change the original string (greeting)
 console.log(greetingYell)
 
 let greetingWhisper = greeting.toLowerCase()
 console.log(greetingWhisper)
 
-console.log("------------------ FINDING THE FIRST OCCURRENCE OF A CHARACTER OR SUBSTRING ------------------")
+writeHeader("FINDING THE FIRST OCCURRENCE OF A CHARACTER OR SUBSTRING")
 
 let indexOfAlberto = greeting.indexOf("Alb")
 console.log(`'Alb' starts at index ` + indexOfAlberto)
 
 
-console.log("------------------ GETTING A SUBSTRING ------------------")
+writeHeader("GETTING A SUBSTRING")
 let extractedName = greeting.slice(indexOfAlberto, indexOfAlberto + 7)
 console.log(extractedName)
 
-console.log("------------------ SPLIT A STRING INTO SEVERAL SUBSTRINGS ------------------")
+writeHeader("SPLIT A STRING INTO SEVERAL SUBSTRINGS")
 let splittedString = greeting.split(" ")
 console.log(splittedString)
 
-console.log("------------------ JOINING THEM BACK ------------------")
+writeHeader("JOINING THEM BACK")
 let reJoinedString = splittedString.join("]-[")
 console.log(reJoinedString)
 
-
-console.log("------------------ CREATING OUR OWN FUNCTIONS ------------------")
+writeHeader("CREATING OUR OWN FUNCTIONS")
 
 const joinTwoStrings = function(firstString, secondString) {
 
